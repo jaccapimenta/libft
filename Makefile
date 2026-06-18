@@ -6,7 +6,7 @@
 #    By: jacavalc <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 14:48:19 by jacavalc          #+#    #+#              #
-#    Updated: 2026/06/18 15:38:44 by jacavalc         ###   ########.fr        #
+#    Updated: 2026/06/18 16:04:05 by jacavalc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ CFILES = ft_isalpha.c \
 		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
+		ft_memmove.c\
 		ft_strncmp.c \
 		ft_atoi.c
 

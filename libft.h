@@ -6,7 +6,7 @@
 /*   By: jacavalc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 15:14:38 by jacavalc          #+#    #+#             */
-/*   Updated: 2026/06/18 15:38:24 by jacavalc         ###   ########.fr       */
+/*   Updated: 2026/06/18 16:03:01 by jacavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 int		ft_atoi(char *str);// size_t  ft_strlen(const char *s);
