@@ -6,7 +6,7 @@
 /*   By: jacavalc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 20:06:23 by jacavalc          #+#    #+#             */
-/*   Updated: 2026/06/18 13:21:59 by jacavalc         ###   ########.fr       */
+/*   Updated: 2026/06/22 16:20:43 by jacavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*ptr;
+	size_t			i;
+	unsigned char	*p;
 
-	ptr = (unsigned char *)s;
-	while (n > 0)
+	i = 0;
+	p = (unsigned char *)s;
+	while (i < n)
 	{
-		*ptr = (unsigned char)c;
-		ptr++;
-		n--;
+		p[i] = (unsigned char)c;
+		i++;
 	}
 	return (s);
 }
-// linha 23 - posição do meu array

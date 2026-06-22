@@ -6,7 +6,7 @@
 /*   By: jacavalc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 14:34:31 by jacavalc          #+#    #+#             */
-/*   Updated: 2026/06/10 16:11:06 by jacavalc         ###   ########.fr       */
+/*   Updated: 2026/06/22 12:27:26 by jacavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ int	ft_isdigit(int c)
 	return (c >= '0' && c <= '9');
 }
 
-// int main() {
+// #include <studio.h>
+//int main() {
 //     char teste1 = '7';
 //     char teste2 = 'a';
 

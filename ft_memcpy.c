@@ -6,7 +6,7 @@
 /*   By: jacavalc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 15:31:44 by jacavalc          #+#    #+#             */
-/*   Updated: 2026/06/18 15:39:52 by jacavalc         ###   ########.fr       */
+/*   Updated: 2026/06/22 15:59:25 by jacavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-// dest: O ponteiro para o destino (onde os dados serão copiados).
-
-// src: O ponteiro para a origem (de onde os dados serão copiados).
-
-// n: O número exato de bytes que você deseja copiar.

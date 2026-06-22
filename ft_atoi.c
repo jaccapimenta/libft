@@ -6,31 +6,31 @@
 /*   By: jacavalc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 17:50:57 by jacavalc          #+#    #+#             */
-/*   Updated: 2026/06/18 13:31:46 by jacavalc         ###   ########.fr       */
+/*   Updated: 2026/06/22 16:18:03 by jacavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	negative;
 	int	number;
 
 	negative = 1;
 	number = 0;
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
-		str++;
-	while (*str == '-' || *str == '+')
+	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
+		nptr++;
+	while (*nptr == '-' || *nptr == '+')
 	{
-		if (*str == '-')
-			negative *= -1;
-		str++;
+		if (*nptr == '-')
+			negative = -1;
+		nptr++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (*nptr >= '0' && *nptr <= '9')
 	{
-		number = number * 10 + (*str - '0');
-		str++;
+		number = number * 10 + (*nptr - '0');
+		nptr++;
 	}
 	return (number * negative);
 }
