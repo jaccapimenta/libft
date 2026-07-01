@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
 	unsigned int	i;
 
@@ -27,13 +27,3 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		return (0);
 	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
-
-// int	main(void)
-// {
-// 	char	s1[] = "Arüroz";
-// 	char	s2[] = "Arroi";
-
-// 	printf("%d\n", ft_strncmp(s1, s2, 5));
-// 	printf("%d", strncmp(s1, s2, 5));
-// 	return (0);
-// }
