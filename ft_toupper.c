@@ -6,7 +6,7 @@
 /*   By: jacavalc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/10 15:31:20 by jacavalc          #+#    #+#             */
-/*   Updated: 2026/06/10 16:11:06 by jacavalc         ###   ########.fr       */
+/*   Updated: 2026/07/06 17:30:39 by jacavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_toupper(int c)
 		c = c - 32;
 	return (c);
 }
-// ft_toupper: transforma letra minuscula em maiuscula 
-/*
-#include <stdio.h>
-int main(void)
-{
-	printf("ft_toupper('a') = %c\n", ft_toupper('a'));
-	return (0);
-}
-*/

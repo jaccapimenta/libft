@@ -6,7 +6,7 @@
 /*   By: jacavalc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 17:30:37 by jacavalc          #+#    #+#             */
-/*   Updated: 2026/06/12 14:50:26 by jacavalc         ###   ########.fr       */
+/*   Updated: 2026/07/06 17:30:14 by jacavalc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-// ft_strlen: conta quantos caracteres existem antes do '\\0'
-/*
-#include <stdio.h>
-int main(void)
-{
-	printf("ft_strlen(\"Hello\") = %zu\n", ft_strlen("Hello"));
-	return (0);
-}	
-*/

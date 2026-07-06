@@ -26,30 +26,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, (nmemb * size));
 	return (ptr);
 }
-
-/*
-Aloca memória e inicializa todos os bytes com zero.
-*/
-
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include "libft.h"
-
-int	main(void)
-{
-	int	*i;
-	int	j;
-
-	i = ft_calloc(5, sizeof(int));
-	j = 0;
-	while (j < 5)
-	{
-		printf("%d ", i[j]);
-		j++;
-	}
-	printf("\n");
-	free(i);
-	return (0);
-}
-*/

@@ -1,88 +1,93 @@
+*This project has been created as part of the 42 curriculum by jacavalc.*
+
 # Libft
 
-*This project has been created as part of the 42 curriculum by jacavalc.*  
-*Este projeto foi criado como parte do currículo da 42 por jacavalc.*
+## Description
 
-### **Description**:
-### **Descrição**:
+**Libft** is the first library project of the 42 curriculum. Its objective is to recreate a selection of standard C library functions while developing a deeper understanding of memory management, pointers, strings, linked lists, and low-level programming.
 
-The Libft project consists of creating a custom C library that reimplements several general-purpose functions from the C standard library, also known as libc, along with additional utility functions.
+Instead of relying on the standard C library, this project builds a personal library that can be reused in future 42 projects.
 
-O projeto Libft consiste na criação de uma biblioteca personalizada em C que reimplementa várias funções de uso geral da biblioteca padrão da linguagem C, também conhecida como libc, além de funções utilitárias adicionais.
+The library includes:
 
-Working in C without access to common standard functions can be limiting. The main goal of this project is to understand how these fundamental functions work internally by rebuilding them from scratch. Through this process, the project reinforces important concepts such as memory allocation, pointer manipulation, string handling, and linked list management.
+- Character classification and conversion functions
+- String manipulation functions
+- Memory management utilities
+- Memory comparison and search functions
+- Number conversion
+- Dynamic memory allocation
+- File descriptor output functions
+- A complete singly linked list implementation
 
-Trabalhar em C sem acesso às funções padrão mais comuns pode ser limitante. O principal objetivo deste projeto é entender como essas funções fundamentais funcionam internamente, reconstruindo-as do zero. Durante esse processo, o projeto reforça conceitos importantes como alocação de memória, manipulação de ponteiros, tratamento de strings e gerenciamento de listas encadeadas.
+The project follows the 42 coding standard (Norminette) and is compiled into a static library named **libft.a**.
 
-The final result is a reusable static library that can be used in future 42 projects.
+---
 
-O resultado final é uma biblioteca estática reutilizável que pode ser usada em futuros projetos da 42.
+# Library Overview
 
-## Library Description
+The library is divided into three major sections.
 
-The final output of this project is a static library file named `libft.a`.
+## Part 1 - Reimplemented libc Functions
 
-The functions are divided into three main parts:
+Functions that reproduce the behavior of the standard C library, including:
 
-### 1. Libc Functions
+- Character checks (`ft_isalpha`, `ft_isdigit`, `ft_isalnum`, ...)
+- Character conversion (`ft_toupper`, `ft_tolower`)
+- Memory manipulation (`ft_memset`, `ft_memcpy`, `ft_memmove`, ...)
+- String handling (`ft_strlen`, `ft_strlcpy`, `ft_strdup`, ...)
+- String searching and comparison
+- Integer conversion (`ft_atoi`)
+- Memory allocation (`ft_calloc`)
 
-Reimplementation of standard libc functions, following their expected behavior and using the `ft_` prefix.
+---
 
-**Character classification and conversion:**
+## Part 2 - Additional Functions
 
-`ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`, `ft_toupper`, `ft_tolower`
+Functions that simplify common programming tasks, including:
 
-**String manipulation:**
+- String extraction (`ft_substr`)
+- String concatenation (`ft_strjoin`)
+- String trimming (`ft_strtrim`)
+- String splitting (`ft_split`)
+- Integer to string conversion (`ft_itoa`)
+- Functional string iteration (`ft_strmapi`, `ft_striteri`)
+- Output functions for file descriptors
 
-`ft_strlen`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_strnstr`, `ft_strlcpy`, `ft_strlcat`
+These functions provide reusable utilities that are frequently used in later 42 projects.
 
-**Memory manipulation:**
+---
 
-`ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_memchr`, `ft_memcmp`
+## Part 3 - Linked List Library
 
-**Conversion and allocation:**
+The project also implements a complete singly linked list API.
 
-`ft_atoi`, `ft_calloc`, `ft_strdup`
+Available operations include:
 
-### 2. Additional Functions
+- Creating new nodes
+- Adding nodes to the front or back
+- Finding the last node
+- Counting list size
+- Iterating through the list
+- Mapping a function over a list
+- Deleting nodes
+- Clearing an entire list
 
-Additional functions created to expand the basic capabilities of the standard library, mainly focused on string manipulation and file descriptor output.
+This API allows dynamic data structures without depending on external libraries.
 
-**String creation and manipulation:**
+---
 
-`ft_substr`, `ft_strjoin`, `ft_strtrim`, `ft_split`, `ft_itoa`
+# Instructions
 
-**Function application:**
-
-`ft_strmapi`, `ft_striteri`
-
-**File descriptor output:**
-
-`ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`
-
-### 3. Linked List Functions
-
-Functions used to create, traverse, modify, and clear linked lists using the `t_list` structure.
-
-`ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`, `ft_lstlast`, `ft_lstadd_back`, `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`, `ft_lstmap`
-
-### **Instructions**:
-### **Instruções**:
-
-### Technical Considerations
-
-- Global variables are not allowed.
-- The code follows the 42 Norm.
-- Source files are compiled with `cc`.
-- The mandatory compilation flags are:
+## Clone the repository
 
 ```bash
--Wall -Wextra -Werror
+git clone <repository_url>
+cd libft
 ```
 
-### Compilation
+## Compile
 
-Compile the library:
+Build the library:
 
 ```bash
 make
@@ -94,36 +99,88 @@ Remove object files:
 make clean
 ```
 
-Remove object files and the static library:
+Remove object files and the library:
 
 ```bash
 make fclean
 ```
 
-Recompile the full project:
+Rebuild everything:
 
 ```bash
 make re
 ```
 
-### Usage
+---
 
-To use `libft.a` in another C project, include the header file:
+# Project Structure
 
-```c
-#include "libft.h"
+```
+.
+├── Makefile
+├── libft.h
+├── *.c
+├── *.o
+└── libft.a
 ```
 
-Then compile your program linking the library:
+---
 
-```bash
-cc main.c -L. -lft -o my_program
-```
+# Technical Choices
 
-### **Resources**:
-### **Recursos**:
+This project was implemented using:
 
-- [GNU C Library Documentation](https://www.gnu.org/software/libc/manual/)
-- [Linux Manual Pages](https://man7.org/linux/man-pages/)
-- [Linked Lists in C - GeeksforGeeks](https://www.geeksforgeeks.org/linked-list-data-structure/)
-- 42 Libft project subject
+- C language
+- GCC compiler
+- Makefile automation
+- Static library generation (`ar`)
+- Dynamic memory allocation
+- Pointer arithmetic
+- Modular function design
+
+The implementation follows the constraints imposed by the 42 curriculum, avoiding unnecessary dependencies and encouraging manual implementation of common library functions.
+
+---
+
+# Resources
+
+Official documentation:
+
+- https://man7.org/linux/man-pages/
+- https://pubs.opengroup.org/onlinepubs/9699919799/
+- https://en.cppreference.com/w/c
+- https://linux.die.net/man/
+
+Books:
+
+- The C Programming Language – Brian W. Kernighan & Dennis M. Ritchie
+- Expert C Programming – Peter van der Linden
+
+Tutorials:
+
+- Beej's Guide to C Programming
+- GeeksforGeeks C Programming Reference
+
+---
+
+# AI Usage
+
+Artificial Intelligence was used only as a learning support tool.
+
+Specifically, AI assisted with:
+
+- Clarifying C language concepts.
+- Explaining pointer manipulation.
+- Understanding memory-related functions.
+- Reviewing documentation.
+- Improving the project documentation (README).
+
+All function implementations, debugging, testing, and final validation were completed by the project author.
+
+---
+
+# Author
+
+**Login:** jacavalc
+
+42 School

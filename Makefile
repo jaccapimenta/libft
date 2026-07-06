@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: jacavalc <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/15 14:48:19 by jacavalc          #+#    #+#              #
-#    Updated: 2026/07/05 02:54:55 by marvin           ###   ########.fr        #
+#    Updated: 2026/07/06 17:27:42 by jacavalc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,5 +77,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
-#All é a regra #ar é o comando para criar a biblioteca# Flag I procura meu arquivo .h
